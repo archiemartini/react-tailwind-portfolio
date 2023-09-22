@@ -25,7 +25,7 @@ const Home = () => {
           </div>
         </div>
         <div>
-          <img src={HeroImage} alt="my visage" className='rounded-2xl mx-auto md:w-full'/>
+          <img src={HeroImage} alt="my visage" className='rounded-2xl mx-auto md:w-full bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer'/>
         </div>
       </div>
     </div>

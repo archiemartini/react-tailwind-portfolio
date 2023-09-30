@@ -16,7 +16,7 @@ const SocialLinks = () => {
       style: 'rounded-tr-md'
     },
     {
-      id: 1,
+      id: 2,
       child: (
         <>
           GitHub <FaGithub size={30} />
@@ -25,7 +25,7 @@ const SocialLinks = () => {
       href: 'https://github.com/archiemartini',
     },
     {
-      id: 1,
+      id: 3,
       child: (
         <>
           Mail <HiOutlineMail size={30} />
@@ -34,7 +34,7 @@ const SocialLinks = () => {
       href: 'mailto:archie.cgm@gmail.com',
     },
     {
-      id: 1,
+      id: 4,
       child: (
         <>
           My CV <BsFillPersonLinesFill size={30} />

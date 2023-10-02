@@ -2,11 +2,15 @@ import React from 'react';
 import html from '../assets/html.png';
 import css from '../assets/css.png';
 import javascript from '../assets/javascript.png';
+import ruby from '../assets/ruby.webp';
 import reactImage from '../assets/react.png';
-import nextjs from '../assets/nextjs.png';
-import graphql from '../assets/graphql.png';
+import rails from '../assets/rails.png';
+import vueJS from '../assets/vueJS.png';
 import github from '../assets/github.png';
 import tailwind from '../assets/tailwind.png';
+import mysql from '../assets/mysql.png'
+import typeScript from '../assets/typeScript.png'
+import aws from '../assets/aws.png'
 
 const Experience = () => {
   const technologies = [
@@ -30,33 +34,57 @@ const Experience = () => {
     },
     {
       id: 4,
-      src: reactImage,
-      title: 'React',
-      style: 'shadow-blue-600'
+      src: ruby,
+      title: 'Ruby',
+      style: 'shadow-red-500'
     },
     {
       id: 5,
+      src: reactImage,
+      title: 'React',
+      style: 'shadow-cyan-400'
+    },
+    {
+      id: 6,
       src: tailwind,
       title: 'Tailwind',
       style: 'shadow-sky-400'
     },
     {
-      id: 6,
-      src: nextjs,
-      title: 'NextJS',
-      style: 'shadow-white'
-    },
-    {
       id: 7,
-      src: graphql,
-      title: 'GraphQL',
-      style: 'shadow-pink-400'
+      src: rails,
+      title: 'Ruby/Rails',
+      style: 'shadow-red-500'
     },
     {
       id: 8,
+      src: vueJS,
+      title: 'Vue.js',
+      style: 'shadow-green-200'
+    },
+    {
+      id: 9,
       src: github,
       title: 'GitHub',
       style: 'shadow-gray-400'
+    },
+    {
+      id: 10,
+      src: mysql,
+      title: 'MySQL',
+      style: 'shadow-cyan-600'
+    },
+    {
+      id: 11,
+      src: typeScript,
+      title: 'TypeScript',
+      style: 'shadow-blue-400'
+    },
+    {
+      id: 12,
+      src: aws,
+      title: 'AWS',
+      style: 'shadow-white'
     },
   ]
 
@@ -67,10 +95,10 @@ const Experience = () => {
           <p className='text-4xl font-bold border-b-4 border-gray-500 p-2 inline'>Experience</p>
           <p className='py-6'>These are the technologies I've worked with</p>
         </div>
-        <div className='w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0'>
+        <div className='w-full flex flex-wrap text-center py-8 px-12 sm:px-0'>
           {
             technologies.map(({id, src, title, style}) => (
-              <div key={id} className={'shadow-md hover:scale-105 duration-500 py-2 rounded-lg ' + style}>
+              <div key={id} className={'shadow-md hover:scale-105 duration-500 m-2 px-6 py-2 rounded-lg ' + style}>
                 <img src={src} alt='' className='w-20 mx-auto'/>
                 <p className='mt-4'>{title}</p>
               </div>

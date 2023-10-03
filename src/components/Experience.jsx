@@ -23,6 +23,9 @@ import liquid from '../assets/liquid.png'
 import jQuery from '../assets/jQuery.png'
 import terraform from '../assets/terraform.png'
 import docker from '../assets/docker.png'
+import figma from '../assets/figma.png'
+import firebase from '../assets/firebase.png'
+import cypress from '../assets/cypress.png'
 
 const Experience = () => {
   const technologies = [
@@ -169,6 +172,24 @@ const Experience = () => {
       src: docker,
       title: 'Docker',
       style: 'shadow-sky-500'
+    },
+    {
+      id: 25,
+      src: figma,
+      title: 'Figma',
+      style: 'shadow-sky-500'
+    },
+    {
+      id: 26,
+      src: firebase,
+      title: 'Firebase',
+      style: 'shadow-yellow-400'
+    },
+    {
+      id: 27,
+      src: cypress,
+      title: 'Cypress',
+      style: 'shadow-white'
     },
   ]
 

@@ -19,7 +19,7 @@ const Portfolio = () => {
       href: 'https://wondrmedical.net/',
       summary: 'A communication and video-hosting web app for cardiology',
       repo: null,
-      info: ['- Building out new pages for Design UX equirements', '- Unit testing all new features to increase overall coverage'],
+      info: ['Building out new pages for Design UX equirements', 'Built with Responsive and Acessible first thinking', 'Unit testing all new features to increase overall coverage', 'Building out and altering existing serialized contracts to interact with our HATEOAS Application',],
       technologies: ['Ruby on Rails', 'JavaScript', 'HTML', 'CSS', 'MiniTest', 'Tailwind', 'MySQL', 'Redis', 'AWS' ]
     },
     {
@@ -28,8 +28,8 @@ const Portfolio = () => {
       src: wondrMedicalApp,
       href: 'https://www.wondrmedical.com/download',
       repo: null,
-      summary: '',
-      info: [''],
+      summary: 'An extension of the main Wondr site\'s messaging service',
+      info: ['Built out an entire Replies feature independently', 'Integrated new screens utlizing third party packages and custom hooks which interfaced with the core RoR site contracts', 'Built and tested all new App builds with Expo, for both iOS and Android'],
       technologies: ['React Native', 'React Testing Library', 'Tailwind', 'Expo', 'Detox' ]
     },
     {
@@ -38,8 +38,8 @@ const Portfolio = () => {
       src: butterAndCrust,
       href: 'https://butterandcrust.com/',
       repo: null,
-      summary: '',
-      info: [''],
+      summary: 'Worked as a freelance Shopify developer',
+      info: ['Built out custom JavaScripts and CSS to improve user journeys', 'Ensured secure Theme Updates for client, and persisted and documented site-wide customisations', 'Manually Tested all changes to the site to ensure safe deployment to production', 'Consulted on the installation of third-party Apps and managed their integration and data-flows'],
       technologies: ['Shopify', 'Liquid', 'JavaScript', 'jQuery']
     }
   ]
@@ -52,7 +52,7 @@ const Portfolio = () => {
       href: 'https://vue-hulla-ta-5r3pie.stackblitz.io/',
       repo: 'https://github.com/archiemartini/vue-hulla-ta-5r3pie',
       summary: 'A tech test which required I build a Product Landing Page for a Shoe company',
-      info: ['- A responsive grid for the list of products'],
+      info: ['A responsive grid for the list of products', 'Made with Accessibility focus, Sighted Keyboard User compatible', 'Screen reader compatible', 'Data was provided to me via JSON'],
       technologies: ['Vue.js', 'Tailwind']
     },
     {
@@ -62,7 +62,7 @@ const Portfolio = () => {
       href: null,
       repo: 'https://github.com/archiemartini/brains-on-brioche',
       summary: 'A MERN stack application built as my final project at Makers bootcamp',
-      info: ['- takes user\'s fridge contents and searches via API for possible recipes they could make', '- state managed by Redux', '- user data stored via MongoDB'],
+      info: ['takes user\'s fridge contents and searches via API for possible recipes they could make', 'state managed by Redux', 'user data stored on MongoDB'],
       technologies: ['React.js', 'Express', 'Node.js', 'MongoDB', 'Axios', 'Redux']
     },
     {
@@ -72,7 +72,7 @@ const Portfolio = () => {
       href: 'https://prismatic-rolypoly-9f3eea.netlify.app',
       repo: 'https://github.com/archiemartini/chitter-challenge-react',
       summary: 'A twitter clone built ontop of Makers\' API',
-      info: ['- utlizes MUI icons library'],
+      info: ['Utilizes MUI icons library'],
       technologies: ['React.js', 'Express', 'Axios']
     }
   ]
@@ -92,20 +92,14 @@ const Portfolio = () => {
 
         <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0 pb-12'>
         {
-          commercialPortfolios.map(({id, title, src, href, repo, summary, info, technologies}) => (
-            <div key={id} className='h-100 w-auto shadow-md shadow-gray-600 rounded-lg'>
-                <img src={src} alt=''  onClick={() => setActivePortfolioId(id)} className='rounded-md object-cover w-full h-full duration-200 hover:scale-105 cursor-pointer'/>
-               <div className='pt-2 text-center'>{title}</div>
+          commercialPortfolios.map((portfolio) => (
+            <div key={portfolio.id} className='h-100 w-auto shadow-md shadow-gray-600 rounded-lg'>
+                <img src={portfolio.src} alt=''  onClick={() => setActivePortfolioId(portfolio.id)} className='rounded-md object-cover w-full h-full duration-200 hover:scale-105 cursor-pointer'/>
+                <div className='text-center'>{portfolio.title}</div>
                 <Popup
-                  trigger={activePortfolioId === id} 
+                  trigger={activePortfolioId === portfolio.id} 
                   setTrigger={setActivePortfolioId}
-                  title={title}
-                  imageSrc={src}
-                  href={href}
-                  repo={repo}
-                  summary={summary}
-                  info={info}
-                  technologies={technologies}
+                  portfolio={portfolio}
                 />
               </div>
           ))
@@ -118,20 +112,14 @@ const Portfolio = () => {
       
         <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0 mb-12 pb-12'>
         {
-          selfPortfolios.map(({id, title, src, href, repo, summary, info, technologies}) => (
-              <div key={id} className='h-100 w-auto shadow-md shadow-gray-600 rounded-lg'>
-                <img src={src} alt=''  onClick={() => setActivePortfolioId(id)} className='rounded-md object-cover w-full h-full duration-200 hover:scale-105 cursor-pointer'/>
-                <div className='text-center'>{title}</div>
+          selfPortfolios.map((portfolio) => (
+              <div key={portfolio.id} className='h-100 w-auto shadow-md shadow-gray-600 rounded-lg'>
+                <img src={portfolio.src} alt=''  onClick={() => setActivePortfolioId(portfolio.id)} className='rounded-md object-cover w-full h-full duration-200 hover:scale-105 cursor-pointer'/>
+                <div className='text-center'>{portfolio.title}</div>
                 <Popup
-                  trigger={activePortfolioId === id} 
+                  trigger={activePortfolioId === portfolio.id} 
                   setTrigger={setActivePortfolioId}
-                  title={title}
-                  imageSrc={src}
-                  href={href}
-                  summary={summary}
-                  repo={repo}
-                  info={info}
-                  technologies={technologies}
+                  portfolio={portfolio}
                 />
               </div>
           ))

@@ -11,6 +11,18 @@ import tailwind from '../assets/tailwind.png';
 import mysql from '../assets/mysql.png'
 import typeScript from '../assets/typeScript.png'
 import aws from '../assets/aws.png'
+import redis from '../assets/redis.png'
+import rspec from '../assets/rspec.png'
+import jest from '../assets/jest.png'
+import postgres from '../assets/postgres.png'
+import mongo from '../assets/mongo.png'
+import expo from '../assets/expo.png'
+import redux from '../assets/redux.png'
+import shopify from '../assets/shopify.png'
+import liquid from '../assets/liquid.png'
+import jQuery from '../assets/jQuery.png'
+import terraform from '../assets/terraform.png'
+import docker from '../assets/docker.png'
 
 const Experience = () => {
   const technologies = [
@@ -46,21 +58,21 @@ const Experience = () => {
     },
     {
       id: 6,
-      src: tailwind,
-      title: 'Tailwind',
-      style: 'shadow-sky-400'
+      src: rails,
+      title: 'Ruby/Rails',
+      style: 'shadow-red-600'
     },
     {
       id: 7,
-      src: rails,
-      title: 'Ruby/Rails',
-      style: 'shadow-red-500'
+      src: tailwind,
+      title: 'Tailwind',
+      style: 'shadow-cyan-500'
     },
     {
       id: 8,
       src: vueJS,
       title: 'Vue.js',
-      style: 'shadow-green-200'
+      style: 'shadow-emerald-300 pt-5'
     },
     {
       id: 9,
@@ -72,19 +84,91 @@ const Experience = () => {
       id: 10,
       src: mysql,
       title: 'MySQL',
-      style: 'shadow-cyan-600'
+      style: 'shadow-sky-800'
     },
     {
       id: 11,
       src: typeScript,
       title: 'TypeScript',
-      style: 'shadow-blue-400'
+      style: 'shadow-sky-500'
     },
     {
       id: 12,
       src: aws,
       title: 'AWS',
       style: 'shadow-white'
+    },
+    {
+      id: 13,
+      src: redis,
+      title: 'Redis',
+      style: 'shadow-red-500'
+    },
+    {
+      id: 14,
+      src: rspec,
+      title: 'Rspec',
+      style: 'shadow-cyan-400'
+    },
+    {
+      id: 15,
+      src: jest,
+      title: 'Jest',
+      style: 'shadow-red-800'
+    },
+    {
+      id: 16,
+      src: postgres,
+      title: 'PostgreSQL',
+      style: 'shadow-sky-800'
+    },
+    {
+      id: 17,
+      src: mongo,
+      title: 'MongoDB',
+      style: 'shadow-lime-600'
+    },
+    {
+      id: 18,
+      src: expo,
+      title: 'Expo',
+      style: 'shadow-white'
+    },
+    {
+      id: 19,
+      src: redux,
+      title: 'Redux',
+      style: 'shadow-violet-800'
+    },
+    {
+      id: 20,
+      src: shopify,
+      title: 'Shopify',
+      style: 'shadow-lime-400'
+    },
+    {
+      id: 21,
+      src: liquid,
+      title: 'Liquid',
+      style: 'shadow-blue-800'
+    },
+    {
+      id: 22,
+      src: jQuery,
+      title: 'jQuery',
+      style: 'shadow-blue-600'
+    },
+    {
+      id: 23,
+      src: terraform,
+      title: 'Terraform',
+      style: 'shadow-indigo-700'
+    },
+    {
+      id: 24,
+      src: docker,
+      title: 'Docker',
+      style: 'shadow-sky-500'
     },
   ]
 

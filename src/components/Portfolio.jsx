@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './Portfolio.css'
 import Popup from './Popup'
 import './Popup.css'
 import butterAndCrust from '../assets/portfolio/commercial/butterAndCrust.png'
@@ -7,6 +8,7 @@ import wondrMedicalApp from '../assets/portfolio/commercial/wondrMedicalApp.png'
 import vueTechTest from '../assets/portfolio/self/vueTechTest.png'
 import brainsOnBrioche from '../assets/portfolio/self/brainsOnBrioche.png'
 import chitterChallenge from '../assets/portfolio/self/chitterChallenge.png'
+import bettah from '../assets/portfolio/self/bettah.png'
 
 const Portfolio = () => {
   const [activePortfolioId, setActivePortfolioId] = useState(null);
@@ -74,8 +76,19 @@ const Portfolio = () => {
       summary: 'A twitter clone built ontop of Makers\' API',
       info: ['Utilizes MUI icons library'],
       technologies: ['React.js', 'Express', 'Axios']
-    }
+    },
+    {
+      id: 14,
+      title: 'Bettah',
+      src: bettah,
+      href: null,
+      repo: 'https://github.com/archiemartini/acebook-allowTeamToReceiveName',
+      summary: 'A facebook clone built with JavaScript and MongoDB',
+      info: [],
+      technologies: ['JavaScript', 'Express', 'Axios', 'Nodemon', 'Jest']
+    },
   ]
+  console.log(activePortfolioId)
 
   return (
     <div name="portfolio" className='bg-gradient-to-b from-black to-gray-800 text-white md:h-screen'>
@@ -93,15 +106,20 @@ const Portfolio = () => {
         <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0 pb-12'>
         {
           commercialPortfolios.map((portfolio) => (
-            <div key={portfolio.id} className='h-100 w-auto shadow-md shadow-gray-600 rounded-lg'>
-                <img src={portfolio.src} alt=''  onClick={() => setActivePortfolioId(portfolio.id)} className='rounded-md object-cover w-full h-full duration-200 hover:scale-105 cursor-pointer'/>
-                <div className='text-center'>{portfolio.title}</div>
+            <div key={portfolio.id} 
+                 className='h-100 w-auto shadow-md shadow-gray-600 rounded-lg' 
+                 onClick={() => setActivePortfolioId(portfolio.id)}>
+                <img src={portfolio.src} alt='' className='w-full h-48 rounded-md object-cover'/>
+                <div className="overlay cursor-pointer">
+                    <div className='text-1xl text-center'>{portfolio.title}</div>
+                    <div className='text-sm text-white p-2 text-center'>{portfolio.summary}</div>
+                </div>
                 <Popup
-                  trigger={activePortfolioId === portfolio.id} 
-                  setTrigger={setActivePortfolioId}
-                  portfolio={portfolio}
+                    trigger={activePortfolioId === portfolio.id} 
+                    setTrigger={setActivePortfolioId}
+                    portfolio={portfolio}
                 />
-              </div>
+            </div>
           ))
         }
         </div>
@@ -113,15 +131,20 @@ const Portfolio = () => {
         <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0 mb-12 pb-12'>
         {
           selfPortfolios.map((portfolio) => (
-              <div key={portfolio.id} className='h-100 w-auto shadow-md shadow-gray-600 rounded-lg'>
-                <img src={portfolio.src} alt=''  onClick={() => setActivePortfolioId(portfolio.id)} className='rounded-md object-cover w-full h-full duration-200 hover:scale-105 cursor-pointer'/>
-                <div className='text-center'>{portfolio.title}</div>
+            <div key={portfolio.id} 
+                 className='h-100 w-auto shadow-md shadow-gray-600 rounded-lg' 
+                 onClick={() => setActivePortfolioId(portfolio.id)}>
+                <img src={portfolio.src} alt='' className='w-full h-48 rounded-md object-cover'/>
+                <div className="overlay cursor-pointer">
+                    <div className='text-1xl text-center'>{portfolio.title}</div>
+                    <div className='text-sm text-white p-2 text-center'>{portfolio.summary}</div>
+                </div>
                 <Popup
-                  trigger={activePortfolioId === portfolio.id} 
-                  setTrigger={setActivePortfolioId}
-                  portfolio={portfolio}
+                    trigger={activePortfolioId === portfolio.id} 
+                    setTrigger={setActivePortfolioId}
+                    portfolio={portfolio}
                 />
-              </div>
+            </div>
           ))
         }
         </div>

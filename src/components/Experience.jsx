@@ -1,31 +1,31 @@
 import React from 'react';
-import html from '../assets/html.png';
-import css from '../assets/css.png';
-import javascript from '../assets/javascript.png';
-import ruby from '../assets/ruby.webp';
-import reactImage from '../assets/react.png';
-import rails from '../assets/rails.png';
-import vueJS from '../assets/vueJS.png';
-import github from '../assets/github.png';
-import tailwind from '../assets/tailwind.png';
-import mysql from '../assets/mysql.png'
-import typeScript from '../assets/typeScript.png'
-import aws from '../assets/aws.png'
-import redis from '../assets/redis.png'
-import rspec from '../assets/rspec.png'
-import jest from '../assets/jest.png'
-import postgres from '../assets/postgres.png'
-import mongo from '../assets/mongo.png'
-import expo from '../assets/expo.png'
-import redux from '../assets/redux.png'
-import shopify from '../assets/shopify.png'
-import liquid from '../assets/liquid.png'
-import jQuery from '../assets/jQuery.png'
-import terraform from '../assets/terraform.png'
-import docker from '../assets/docker.png'
-import figma from '../assets/figma.png'
-import firebase from '../assets/firebase.png'
-import cypress from '../assets/cypress.png'
+import html from '../assets/experience/html.png';
+import css from '../assets/experience/css.png';
+import javascript from '../assets/experience/javascript.png';
+import ruby from '../assets/experience/ruby.webp';
+import reactImage from '../assets/experience/react.png';
+import rails from '../assets/experience/rails.png';
+import vueJS from '../assets/experience/vueJS.png';
+import github from '../assets/experience/github.png';
+import tailwind from '../assets/experience/tailwind.png';
+import mysql from '../assets/experience/mysql.png'
+import typeScript from '../assets/experience/typeScript.png'
+import aws from '../assets/experience/aws.png'
+import redis from '../assets/experience/redis.png'
+import rspec from '../assets/experience/rspec.png'
+import jest from '../assets/experience/jest.png'
+import postgres from '../assets/experience/postgres.png'
+import mongo from '../assets/experience/mongo.png'
+import expo from '../assets/experience/expo.png'
+import redux from '../assets/experience/redux.png'
+import shopify from '../assets/experience/shopify.png'
+import liquid from '../assets/experience/liquid.png'
+import jQuery from '../assets/experience/jQuery.png'
+import terraform from '../assets/experience/terraform.png'
+import docker from '../assets/experience/docker.png'
+import figma from '../assets/experience/figma.png'
+import firebase from '../assets/experience/firebase.png'
+import cypress from '../assets/experience/cypress.png'
 
 const Experience = () => {
   const technologies = [
@@ -194,7 +194,7 @@ const Experience = () => {
   ]
 
   return (
-    <div name='experience' className='bg-gradient-to-b from-gray-800 to-black w-full h-screen'>
+    <div name='experience' className='bg-gradient-to-b from-gray-800 to-black w-full min-h-screen'>
       <div className='max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white'>
         <div>
           <p className='text-4xl font-bold border-b-4 border-gray-500 p-2 inline'>Experience</p>
@@ -203,7 +203,7 @@ const Experience = () => {
         <div className='w-full flex flex-wrap text-center py-8 px-12 sm:px-0'>
           {
             technologies.map(({id, src, title, style}) => (
-              <div key={id} className={'shadow-md hover:scale-105 duration-500 m-2 px-6 py-2 rounded-lg ' + style}>
+              <div key={id} className={'shadow-md hover:scale-105 duration-500 m-1 sm:m-2 px-4 sm:px-6 py-2 sm:py-2 rounded-lg ' + style}>
                 <img src={src} alt='' className='w-20 mx-auto'/>
                 <p className='mt-4'>{title}</p>
               </div>

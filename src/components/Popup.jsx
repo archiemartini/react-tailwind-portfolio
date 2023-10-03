@@ -5,7 +5,10 @@ const Popup = ({trigger, setTrigger, portfolio}) => {
   return (trigger) ? (
     <div className='popup w-full h-screen'>
       <div className='popup-inner'>
-        <button className='close-btn' onClick={() => setTrigger(null)}>close</button>
+      <button className='close-btn' onClick={(e) => {
+          e.stopPropagation();
+          setTrigger(null);
+      }}>close</button>
         <div className='text-1xl text-center font-bold pb-2'>{title}</div>
         <img src={src} alt={title}   className='rounded-md'/>
         <div className='pt-2'>
@@ -23,8 +26,8 @@ const Popup = ({trigger, setTrigger, portfolio}) => {
           Technologies used:
         </div>
         <div className='flex flex-wrap justify-center'>
-          {technologies.map((tech) => (
-            <div className='rounded-md m-0.5 py-1 px-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white'>
+          {technologies.map((tech, index) => (
+            <div key={index} className='rounded-md m-0.5 py-1 px-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white'>
              {tech}
             </div>
           ))}

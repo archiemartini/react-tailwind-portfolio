@@ -109,6 +109,7 @@ const Portfolio = () => {
                  className='h-100 w-auto shadow-md shadow-gray-600 rounded-lg' 
                  onClick={() => setActivePortfolioId(portfolio.id)}>
                 <img src={portfolio.src} alt='' className='w-full h-48 rounded-md object-cover'/>
+                <div className="sm:hidden text-center font-medium mt-2">{portfolio.title}</div>
                 <div className="overlay cursor-pointer">
                     <div className='text-1xl text-center font-medium'>{portfolio.title}</div>
                     <div className='text-sm text-white p-2 text-center'>{portfolio.summary}</div>
@@ -132,6 +133,7 @@ const Portfolio = () => {
                  className='h-100 w-auto shadow-md shadow-gray-600 rounded-lg' 
                  onClick={() => setActivePortfolioId(portfolio.id)}>
                 <img src={portfolio.src} alt='' className='w-full h-48 rounded-md object-cover'/>
+                <div className="sm:hidden text-center font-medium my-2">{portfolio.title}</div>
                 <div className="overlay cursor-pointer">
                     <div className='text-1xl text-center font-medium'>{portfolio.title}</div>
                     <div className='text-sm text-white p-2 text-center'>{portfolio.summary}</div>

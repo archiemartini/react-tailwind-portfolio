@@ -8,7 +8,7 @@ const Home = () => {
   const [contentRef, isVisible] = useFadeInOnScroll();
 
   return (
-    <div name="home" className='min-h-screen w-full bg-gradient-to-b from-black via-black to-gray-800 text-white'>
+    <div name="home" className='pt-20 h-screen w-full bg-gradient-to-b from-black via-black to-gray-800 text-white'>
       <div 
         ref={contentRef}
         className={`max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}

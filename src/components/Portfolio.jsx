@@ -1,18 +1,20 @@
-import React, { useState } from 'react'
-import './Portfolio.css'
-import Popup from './Popup'
-import './Popup.css'
-import butterAndCrust from '../assets/portfolio/commercial/butterAndCrust.png'
-import wondrMedicalSite from '../assets/portfolio/commercial/wondrMedicalSite.png'
-import wondrMedicalApp from '../assets/portfolio/commercial/wondrMedicalApp.png'
-import vueTechTest from '../assets/portfolio/self/vueTechTest.png'
-import brainsOnBrioche from '../assets/portfolio/self/brainsOnBrioche.png'
-import chitterChallenge from '../assets/portfolio/self/chitterChallenge.png'
-import bettah from '../assets/portfolio/self/bettah.png'
+import React, { useState } from 'react';
+import useFadeInOnScroll from '../hooks/useFadeInOnScroll';
+import './Portfolio.css';
+import Popup from './Popup';
+import './Popup.css';
+import butterAndCrust from '../assets/portfolio/commercial/butterAndCrust.png';
+import wondrMedicalSite from '../assets/portfolio/commercial/wondrMedicalSite.png';
+import wondrMedicalApp from '../assets/portfolio/commercial/wondrMedicalApp.png';
+import vueTechTest from '../assets/portfolio/self/vueTechTest.png';
+import brainsOnBrioche from '../assets/portfolio/self/brainsOnBrioche.png';
+import chitterChallenge from '../assets/portfolio/self/chitterChallenge.png';
+import bettah from '../assets/portfolio/self/bettah.png';
 
 const Portfolio = () => {
   const [activePortfolioId, setActivePortfolioId] = useState(null);
-  
+  const [contentRef, isVisible] = useFadeInOnScroll();
+
   const commercialPortfolios = [
     {
       id: 1,
@@ -21,8 +23,8 @@ const Portfolio = () => {
       href: 'https://wondrmedical.net/',
       summary: 'A communication and video-hosting web app for cardiology',
       repo: null,
-      info: ['Building out new pages for Design UX equirements', 'Built with Responsive and Acessible first thinking', 'Unit testing all new features to increase overall coverage', 'Building out and altering existing serialized contracts to interact with our HATEOAS Application',],
-      technologies: ['Ruby on Rails', 'JavaScript', 'HTML', 'CSS', 'MiniTest', 'Tailwind', 'MySQL', 'Redis', 'AWS' ]
+      info: ['Building out new pages for Design UX requirements', 'Built with Responsive and Accessible first thinking', 'Unit testing all new features to increase overall coverage', 'Building out and altering existing serialized contracts to interact with our HATEOAS Application',],
+      technologies: ['Ruby on Rails', 'JavaScript', 'HTML', 'CSS', 'MiniTest', 'Tailwind', 'MySQL', 'Redis', 'AWS']
     },
     {
       id: 2,
@@ -44,7 +46,7 @@ const Portfolio = () => {
       info: ['Built out custom JavaScripts and CSS to improve user journeys', 'Ensured secure Theme Updates for client, and persisted and documented site-wide customisations', 'Manually Tested all changes to the site to ensure safe deployment to production', 'Consulted on the installation of third-party Apps and managed their integration and data-flows'],
       technologies: ['Shopify', 'Liquid', 'JavaScript', 'jQuery']
     }
-  ]
+  ];
 
   const selfPortfolios = [
     {
@@ -87,11 +89,11 @@ const Portfolio = () => {
       info: [],
       technologies: ['JavaScript', 'Express', 'Axios', 'Nodemon', 'Jest']
     },
-  ]
+  ];
 
   return (
     <div name="portfolio" className='bg-gradient-to-b from-black to-gray-800 text-white md:h-screen'>
-      <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full z-0'>
+      <div ref={contentRef} className={`max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full z-0 transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
         <div className='pb-8'>
           <p className='text-4xl font-bold inline border-b-4 border-gray-500'>Portfolio</p>
           <p className='py-6'>Check out some of my work right here</p>
@@ -101,10 +103,8 @@ const Portfolio = () => {
           Commercial:
         </div>
 
-
         <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0 pb-12'>
-        {
-          commercialPortfolios.map((portfolio) => (
+          {commercialPortfolios.map((portfolio) => (
             <div key={portfolio.id} 
                  className='h-100 w-auto shadow-md shadow-gray-600 rounded-lg' 
                  onClick={() => setActivePortfolioId(portfolio.id)}>
@@ -119,23 +119,21 @@ const Portfolio = () => {
                     portfolio={portfolio}
                 />
             </div>
-          ))
-        }
+          ))}
         </div>
 
         <div className='text-1xl font-bold inline mb-4'>
           Personal Projects:
         </div>
-      
+
         <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0 mb-12 pb-12'>
-        {
-          selfPortfolios.map((portfolio) => (
+          {selfPortfolios.map((portfolio) => (
             <div key={portfolio.id} 
                  className='h-100 w-auto shadow-md shadow-gray-600 rounded-lg' 
                  onClick={() => setActivePortfolioId(portfolio.id)}>
                 <img src={portfolio.src} alt='' className='w-full h-48 rounded-md object-cover'/>
                 <div className="overlay cursor-pointer">
-                    <div className='text-1xl text-center'>{portfolio.title}</div>
+                    <div className='text-1xl text-center font-medium'>{portfolio.title}</div>
                     <div className='text-sm text-white p-2 text-center'>{portfolio.summary}</div>
                 </div>
                 <Popup
@@ -143,14 +141,12 @@ const Portfolio = () => {
                     setTrigger={setActivePortfolioId}
                     portfolio={portfolio}
                 />
-            </div>
-          ))
-        }
+            </div> 
+          ))}
         </div>
-
       </div>
     </div>
   )
 }
 
-export default Portfolio
+export default Portfolio;

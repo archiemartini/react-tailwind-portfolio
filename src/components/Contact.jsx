@@ -1,16 +1,19 @@
-import React from 'react'
+import React from 'react';
+import useFadeInOnScroll from '../hooks/useFadeInOnScroll';
 
 const Contact = () => {
+  const [contentRef, isVisible] = useFadeInOnScroll();
+
   return (
     <div name='contact' className='w-full hscreen bg-gradient-to-b from-black to-gray-800 p-4 text-white'>
-        <div className='flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full'>
+        <div ref={contentRef} className={`flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
           <div className='pb-8'>
             <p className='text-4xl font-bold inline border-b-4 border-gray-500'>Contact</p>
             <p className='py-6'>Submit the form below to get in touch with me</p>
           </div>
 
           <div className='flex justify-center items-center'>
-            <form action='https://getform.io/f/d2678bab-bb70-490e-bdb8-9efd91a917df' method='POST' className='flex flex-col w-full md:w-1/2' >
+            <form action='https://getform.io/f/d2678bab-bb70-490e-bdb8-9efd91a917df' method='POST' className='flex flex-col w-full md:w-1/2'>
               <input 
                 type='text' 
                 name='name' 
@@ -37,4 +40,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default Contact;

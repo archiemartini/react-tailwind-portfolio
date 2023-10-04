@@ -20,7 +20,7 @@ const About = () => {
           </p>
           <br />
           <p className='text-xl'>
-            Company wide redundancies put my position (and 80% of staff) at risk, but before now I was excelling in my role as Junior Developer, seeing dozens of PRs deployed into production in my first few months. Working across a Ruby on Rails website and a React Native mobile application, I proved myself an efficient and dependable developer. I sat in the support team, regularly fixing high priority bugs, on a weekly basis, in quick turnaround. I'm now very with all facets of the AGILE development workflow and CI/CD processes.
+            Company wide redundancies put my position (and 80% of staff) at risk, but before now I was excelling in my role as Junior Developer, seeing dozens of PRs deployed into production in my first few months. Working across a Ruby on Rails website and a React Native mobile application, I proved myself an efficient and dependable developer. I sat in the support team, regularly fixing high priority bugs, on a weekly basis, in quick turnaround. I'm now very familiar with all facets of the AGILE development workflow and CI/CD processes.
           </p>
           <br />
           <p className='text-xl'>

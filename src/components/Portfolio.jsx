@@ -88,7 +88,6 @@ const Portfolio = () => {
       technologies: ['JavaScript', 'Express', 'Axios', 'Nodemon', 'Jest']
     },
   ]
-  console.log(activePortfolioId)
 
   return (
     <div name="portfolio" className='bg-gradient-to-b from-black to-gray-800 text-white md:h-screen'>
@@ -111,7 +110,7 @@ const Portfolio = () => {
                  onClick={() => setActivePortfolioId(portfolio.id)}>
                 <img src={portfolio.src} alt='' className='w-full h-48 rounded-md object-cover'/>
                 <div className="overlay cursor-pointer">
-                    <div className='text-1xl text-center'>{portfolio.title}</div>
+                    <div className='text-1xl text-center font-medium'>{portfolio.title}</div>
                     <div className='text-sm text-white p-2 text-center'>{portfolio.summary}</div>
                 </div>
                 <Popup

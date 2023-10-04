@@ -16,11 +16,11 @@ const About = () => {
         </div>
         <div>
           <p className='text-xl mt-20'>
-            Coming from a previous life as a humanities student and a career in the editorial world, I'm a full-stack developer looking to continue the 9 months of stellar work I've put in at my first company, Wondr Medical. During my time at Wondr I became adept at debugging large-scale applications, grokking legacy code, and contributing to a cross-functional team.
+            Humanities student turned full-stack developer, I'm looking to continue the 9 months of stellar work I've put in at my first company, Wondr Medical. During my time at Wondr I became adept at debugging large-scale applications, grokking legacy code, and contributing to a cross-functional team. Now I'm looking for a new role, and my next challenge.
           </p>
           <br />
           <p className='text-xl'>
-            Company wide redundancies put my position (and 80% of staff) at risk, but before now I was excelling in my role as Junior Developer, seeing dozens of PRs deployed into production in my first few months. Working across a Ruby on Rails website and a React Native mobile application, I proved myself an efficient and dependable developer. I sat in the support team, regularly fixing high priority bugs, on a weekly basis, in quick turnaround. I'm now very familiar with all facets of the AGILE development workflow and CI/CD processes.
+            Company wide redundancies put my position (and 80% of staff) at risk. Before now, I was excelling in my role as Junior Developer. I saw dozens of PRs deployed into production in my first few months. Working across a Ruby on Rails website and a React Native mobile application, I proved myself an efficient and dependable full-stack developer. I sat in the support team, regularly fixing high priority bugs, on a weekly basis, in quick turnaround. I also singlehandedly built out a replies feature that ran through both applications. My experience has made me completely comfortable with all facets of the AGILE development workflow and CI/CD processes.
           </p>
           <br />
           <p className='text-xl'>

@@ -11,9 +11,9 @@ const Home = () => {
     <div name="home" className='pt-20 h-screen w-full bg-gradient-to-b from-black via-black to-gray-800 text-white'>
       <div 
         ref={contentRef}
-        className={`max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+        className={`max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full pt-32 px-4 md:flex-row transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
       >
-        <div className='flex flex-col justify-center h-full pt-20'>
+        <div className='flex flex-col justify-center h-full'>
           <h2 className='text-4xl sm:text-7xl font-bold text-white'>
             I'm a Fullstack Developer
           </h2>
@@ -31,7 +31,7 @@ const Home = () => {
           </div>
         </div>
         <div>
-          <img src={HeroImage} alt="my visage" className='rounded-2xl mx-auto md:w-full bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer'/>
+          <img src={HeroImage} alt="my visage" className='rounded-2xl mx-auto md:w-full max-w-lg bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer'/>
         </div>
       </div>
     </div>

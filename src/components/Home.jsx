@@ -31,7 +31,7 @@ const Home = () => {
           </div>
         </div>
         <div>
-          <img src={HeroImage} alt="my visage" className='rounded-2xl mx-auto md:w-full max-w-lg bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer'/>
+          <img src={HeroImage} alt="my visage" className='rounded-2xl mx-auto md:w-full sm:max-w-sm md:max-w-lg bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer'/>
         </div>
       </div>
     </div>

@@ -1,7 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const Popup = ({trigger, setTrigger, portfolio}) => {
   const { title, src, href, repo, summary, info, technologies } = portfolio
+
+  useEffect(() => {
+    if (trigger) {
+        document.body.style.overflow = 'hidden'; 
+    }
+    return () => {
+        document.body.style.overflow = 'unset'; 
+    };
+  }, [trigger]);
+
   return (trigger) ? (
     <div className='popup flex justify-center items-center'>
       <div className='popup-inner relative rounded-lg shadow-md'>

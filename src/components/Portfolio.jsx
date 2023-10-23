@@ -94,8 +94,8 @@ const Portfolio = () => {
       id: 14,
       title: 'React Weather App',
       src: weatherApp,
-      href: null,
-      repo: 'https://github.com/archiemartini/acebook-allowTeamToReceiveName',
+      href: 'https://taupe-travesseiro-d15fd2.netlify.app/',
+      repo: 'https://github.com/archiemartini/react-weather-app',
       summary: 'A React weather app employing two APIs and asynchronous components',
       info: ['One API to asynchronously search cities', 'Another API to fetch a 7-day forecast for selected city'],
       technologies: ['JavaScript', 'React', 'API', 'CSS', 'HTML']

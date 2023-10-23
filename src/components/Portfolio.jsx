@@ -10,6 +10,7 @@ import vueTechTest from '../assets/portfolio/self/vueTechTest.png';
 import brainsOnBrioche from '../assets/portfolio/self/brainsOnBrioche.png';
 import chitterChallenge from '../assets/portfolio/self/chitterChallenge.png';
 import bettah from '../assets/portfolio/self/bettah.png';
+import weatherApp from '../assets/portfolio/self/weatherApp.png'
 
 const Portfolio = () => {
   const [activePortfolioId, setActivePortfolioId] = useState(null);

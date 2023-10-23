@@ -89,6 +89,16 @@ const Portfolio = () => {
       info: [],
       technologies: ['JavaScript', 'Express', 'Axios', 'Nodemon', 'Jest']
     },
+    {
+      id: 14,
+      title: 'React Weather App',
+      src: weatherApp,
+      href: null,
+      repo: 'https://github.com/archiemartini/acebook-allowTeamToReceiveName',
+      summary: 'A facebook clone built with JavaScript and MongoDB',
+      info: [],
+      technologies: ['JavaScript', 'React', 'API', 'CSS', 'HTML']
+    },
   ];
 
   return (

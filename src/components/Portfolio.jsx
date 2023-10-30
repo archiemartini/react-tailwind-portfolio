@@ -11,6 +11,7 @@ import brainsOnBrioche from '../assets/portfolio/self/brainsOnBrioche.png';
 import chitterChallenge from '../assets/portfolio/self/chitterChallenge.png';
 import bettah from '../assets/portfolio/self/bettah.png';
 import weatherApp from '../assets/portfolio/self/weatherApp.png'
+import promptopia from '../assets/portfolio/self/promptopia.png'
 
 const Portfolio = () => {
   const [activePortfolioId, setActivePortfolioId] = useState(null);
@@ -52,6 +53,16 @@ const Portfolio = () => {
   const selfPortfolios = [
     {
       id: 11,
+      title: 'Promptopia - Next.js',
+      src: promptopia,
+      href: 'https://share-prompts-navy.vercel.app/',
+      repo: 'https://github.com/archiemartini/share_prompts',
+      summary: 'A Next.js application where users can share useful AI prompts',
+      info: ['Fullstack Next.js application', 'Authentication with GoogleAuth', 'Deployed on Vercel', 'MongoDB used for database'],
+      technologies: ['Next.js', 'Tailwind']
+    },
+    {
+      id: 12,
       title: 'Product Landing Page - Vue.js',
       src: vueTechTest,
       href: 'https://vue-hulla-ta-5r3pie.stackblitz.io/',
@@ -61,7 +72,7 @@ const Portfolio = () => {
       technologies: ['Vue.js', 'Tailwind']
     },
     {
-      id: 12,
+      id: 13,
       title: 'Brains on Brioche',
       src: brainsOnBrioche,
       href: null,
@@ -71,7 +82,7 @@ const Portfolio = () => {
       technologies: ['React.js', 'Express', 'Node.js', 'MongoDB', 'Axios', 'Redux']
     },
     {
-      id: 13,
+      id: 14,
       title: 'Chitter Challenge',
       src: chitterChallenge,
       href: 'https://prismatic-rolypoly-9f3eea.netlify.app',
@@ -81,7 +92,7 @@ const Portfolio = () => {
       technologies: ['React.js', 'Express', 'Axios']
     },
     {
-      id: 14,
+      id: 15,
       title: 'Bettah',
       src: bettah,
       href: null,
@@ -91,7 +102,7 @@ const Portfolio = () => {
       technologies: ['JavaScript', 'Express', 'Axios', 'Nodemon', 'Jest']
     },
     {
-      id: 15,
+      id: 16,
       title: 'React Weather App',
       src: weatherApp,
       href: 'https://taupe-travesseiro-d15fd2.netlify.app/',
